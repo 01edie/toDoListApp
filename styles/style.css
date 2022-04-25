@@ -1,0 +1,176 @@
+/* font */
+
+/* global css */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+span{
+  width: fit-content;
+}
+/* project css */
+header{
+  height: 7.5rem;
+  background-color: rgb(106, 106, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h2{
+  font-size: 4rem;
+  text-align: center;
+}
+
+.container{
+  width: 100%;
+  height: calc(100vh - 7.5rem);
+  background-color: lavender;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.new-list-text{
+  width: 20rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+.btn-create{
+  margin-left: 1rem;
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: none;
+
+}
+.btn-create:active{
+  box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.25);
+
+}
+.create-to-do-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.error-message, .t-error-message{
+  color: red;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.to-do-lists{
+  width: 35rem;
+}
+.storage-to-do-list{
+  padding-top: 3rem;
+  padding-left: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.storage-to-do-list-heading{
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.list-container{
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: rgb(182, 182, 252);
+  width: 35rem;
+  height: 20rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding-top: 1rem;
+  padding-bottom: 10px;
+}
+.tdl{
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.tdl:hover{
+  color: rgb(245, 240, 240);
+}
+.active{
+  color: white;
+}
+.p-buttons{
+  display: flex;
+  gap: 0.75rem;
+}
+.p-edit, .p-delete{
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: inherit;
+}
+
+.task-container{
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgb(186, 186, 214);
+  width: 35rem;
+  height: 20rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding-top: 1rem;
+  padding-bottom: 10px;
+  position: relative;
+}
+.tdl-task{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tdl-active{
+  display: flex;
+}
+.tdl-inactive{
+  display: none;
+}
+.tasks-crud{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}

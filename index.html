@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="To Do List Application">
+  <title>To Do List Application</title>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
+    integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <header>
+    <h2 class="title">To Do List Manager</h2>
+  </header>
+  <main class="container">
+    <div class="create-to-do-list">
+      <form action="#" class="form-create">
+        <input type="text" class="new-list-text" maxlength="40">
+        <button class="btn-create" type="submit" value="create">create</button>
+      </form>
+      <small class="error-message"></small>
+    </div>
+    <div class="storage-to-do-list">
+      <div class="to-do-lists">
+        <h3 class="storage-to-do-list-heading">To Do list:</h3>
+        <div class="list-container">
+          <div class="tdl active"  id="0">
+            <p class="list-item" id="s" onclick="activeList(event)">my sunday to do list</p>
+            <div class="p-buttons">
+              <button class="p-edit" onclick="editList(event)"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button class="p-delete" onclick="deleteList(event)"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="tasks">
+        <h3 class="storage-to-do-list-heading">Tasks:</h3>
+        <div class="task-container">
+          <!-- empty-message -->
+          <div class="empty-message" style="display: none;">
+            <p>nothing to display, select any To Do list</p>
+          </div>
+
+          <div class="t0 tdl-task tdl-active">
+            <div class="tdl">
+              <p class="list-item">1.wake up</p>
+              <div class="p-buttons">
+                <button class="p-edit" onclick="tEditList(event)"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="p-delete" onclick="tDeleteList(event)"><i class="fa-solid fa-delete-left"></i></button>
+              </div>
+            </div>
+            <div class="tdl">
+              <p class="list-item">2.morning walk</p>
+              <div class="p-buttons">
+                <button class="p-edit" onclick="tEditList(event)"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="p-delete" onclick="tDeleteList(event)"><i class="fa-solid fa-delete-left"></i></button>
+              </div>
+            </div>
+            <div class="tdl">
+              <p class="list-item">3.rest</p>
+              <div class="p-buttons">
+                <button class="p-edit" onclick="tEditList(event)"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="p-delete" onclick="tDeleteList(event)"><i class="fa-solid fa-delete-left"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="tasks-crud">
+            <small class="t-error-message"></small>
+            <form action="#" class="form-create" id="task-form">
+              <input type="text" class="new-list-text" id="task-input">
+              <button class="btn-create" type="submit" id="task-submit-btn" value="create">add</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>
