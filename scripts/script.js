@@ -94,6 +94,16 @@ const activeList = (e) => {
   console.log(taskId);
   console.log(document.querySelector(`.t${taskId}`));
   document.querySelector(`.t${taskId}`).classList.add('tdl-active');
+  // let tmp =`.t${taskId}`;
+  // $('document').ready(function(){
+  //   console.log('working', tmp);
+  //   $(tmp).slideDown();
+  // })
+  if(document.querySelector(`.t${taskId}`).children.length === 0){
+    document.querySelector('.empty-message').style.display = 'flex';
+  }else{
+    document.querySelector('.empty-message').style.display = 'none';
+  }
   document.querySelector(`.t${taskId}`).classList.remove('tdl-inactive');
   console.log(document.querySelector(`.t${taskId}`));
 
@@ -114,6 +124,7 @@ const secondaryButtonEvent = (e) => {
       tErrorMessageEl.style.color = 'red';
     }
     else {
+      document.querySelector('.empty-message').style.display = 'none';
       let tListDiv = document.createElement('div');
       tListDiv.className = 'tdl';
 
