@@ -13,7 +13,7 @@ const tErrorMessageEl = document.querySelector('.t-error-message');
 let primaryUpdateEl; //for identifying the updating element
 let secondaryUpdateEl;
 let idValue = 0; //for mapping todo lists to tasks
-let taskId=0;
+let taskId = 0;
 
 // functions
 const primaryButtonEvent = (e) => {
@@ -30,7 +30,7 @@ const primaryButtonEvent = (e) => {
       listDiv.className = 'tdl';
       idValue += 1;
       listDiv.setAttribute('id', `${idValue}`);
-      
+
 
       listDiv.innerHTML = `<p class="list-item" onclick="activeList(event)">${primaryInput.value}</p><div class="p-buttons">
       <button class="p-edit" onclick="editList(event)"><i class="fa-solid fa-pen-to-square"></i></button>
@@ -83,29 +83,29 @@ const activeList = (e) => {
 
   // displaying tasks of todo list
   taskId = e.target.parentElement.getAttribute('id');
-  console.log(taskId);
+
   if (document.querySelector('.tdl-active') !== null) {
     let nowEl = document.querySelector('.tdl-active');
     nowEl.classList.remove('tdl-active');
     nowEl.classList.add('tdl-inactive');
 
-    console.log('displaying none');
+
   }
-  console.log(taskId);
-  console.log(document.querySelector(`.t${taskId}`));
+
+
   document.querySelector(`.t${taskId}`).classList.add('tdl-active');
   // let tmp =`.t${taskId}`;
   // $('document').ready(function(){
-  //   console.log('working', tmp);
+  //  
   //   $(tmp).slideDown();
   // })
-  if(document.querySelector(`.t${taskId}`).children.length === 0){
+  if (document.querySelector(`.t${taskId}`).children.length === 0) {
     document.querySelector('.empty-message').style.display = 'flex';
-  }else{
+  } else {
     document.querySelector('.empty-message').style.display = 'none';
   }
   document.querySelector(`.t${taskId}`).classList.remove('tdl-inactive');
-  console.log(document.querySelector(`.t${taskId}`));
+
 
 }
 
@@ -161,7 +161,6 @@ const tDeleteList = (e) => {
   tErrorMessageEl.style.color = 'green';
 }
 //events 
-console.log(document.querySelectorAll('.list-container'));
 primaryButton.addEventListener('click', primaryButtonEvent);
 secondaryButton.addEventListener('click', secondaryButtonEvent);
 
